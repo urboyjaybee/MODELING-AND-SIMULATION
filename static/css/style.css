@@ -1,0 +1,286 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    padding: 20px;
+}
+
+.app-header {
+    background-color: #1a237e;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.sidebar {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    border: 1px solid var(--border-color);
+}
+
+.main-content {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.card {
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px;
+}
+
+.form-control {
+    background-color: #333;
+    border-color: #444;
+    color: #fff;
+}
+
+.form-control:focus {
+    background-color: #404040;
+    border-color: #666;
+    color: #fff;
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: #1a237e;
+    border-color: #1a237e;
+    border: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #283593;
+    border-color: #283593;
+    transform: translateY(-2px);
+}
+
+.parameter-section {
+    margin-bottom: 30px;
+}
+
+.parameter-input {
+    margin-bottom: 15px;
+}
+
+.species-settings {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.visualization-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.plot-container {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.results-table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.results-table th,
+.results-table td {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.download-section {
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.loading-spinner {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-bottom: 20px;
+    }
+    
+    .plot-container {
+        height: 300px;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+.species-container {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.species-settings {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+}
+
+.parameter-inputs {
+    margin-left: 15px;
+}
+
+.progress {
+    background-color: #444;
+}
+
+.progress-bar {
+    background-color: #1a237e;
+}
+
+.alert {
+    margin-top: 1rem;
+}
+
+#loadingSpinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+#spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+/* Style for sample data text */
+#sampleData {
+    color: white;
+    color: white !important;
+}
+
+/* Animation for spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.sample-data {
+    color: white !important;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Additional styles for input fields if needed */
+input, select {
+input, select, textarea, .form-control {
+    background-color: #444;
+    color: white;
+    border: 1px solid #666;
+    }
+}
+
+/* Add these styles for sample data */
+#dataSample {
+    color: white !important;
+}
+
+#dataSample pre {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+/* Style for JSON text */
+pre {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Add these styles for the scrollable sample data container */
+.sample-data-container {
+    max-height: 300px;  /* Adjust this value to control container height */
+    overflow-y: auto;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+#dataSample pre {
+    color: white !important;
+    margin: 0;  /* Remove default margins */
+    padding: 15px;
+    background-color: transparent;  /* Remove background since container has it */
+}
+
+/* Style the scrollbar for the sample data */
+.sample-data-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sample-data-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.sample-data-container::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+.sample-data-container::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Change cursor to pointer for checkboxes and labels */
+.custom-control-input,
+.custom-control-label {
+    cursor: pointer;
+}
